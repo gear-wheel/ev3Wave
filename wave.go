@@ -6,5 +6,10 @@ import (
 )
 
 func main() {
-  fmt.Println(brick.DiscoverSensors())
+  sensors, err := brick.DiscoverSensors()
+  if err != nil {
+    fmt.Println(err)
+  } else {
+    fmt.Println(sensors)
+  }
 }
